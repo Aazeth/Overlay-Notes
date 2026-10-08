@@ -77,12 +77,6 @@ This project was built to test a frictionless alternative: **floating, persisten
 # Debug:   app/build/outputs/apk/debug/app-debug.apk
 # Release: app/build/outputs/apk/release/app-release.apk
 ```
-
-### 3. Automated Builds via GitHub Actions 🤖
-Every push to `main` and version tag (`v*`) automatically builds the Release APK via GitHub Actions:
-- **Download Artifacts**: Go to the **Actions** tab on GitHub, click the latest workflow run, and download the `OverlayNotes-Release-APK` artifact.
-- **GitHub Releases**: Creating and pushing a git tag (e.g., `git tag v1.0.0 && git push origin v1.0.0`) will automatically publish the Release APK to your GitHub Releases page!
-
 ---
 
 ## 🧪 Project Status & Disclaimer
