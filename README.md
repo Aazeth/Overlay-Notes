@@ -1,6 +1,6 @@
 # Overlay Notes 📝
 
-> **An experimental Android project born out of frustration with conventional note-taking apps while multitasking.**
+> **An experimental Android project created via Google AI Studio, born out of frustration with conventional note-taking apps while multitasking due to limited coding skills.**
 
 ---
 
@@ -56,7 +56,7 @@ This project was built to test a frictionless alternative: **floating, persisten
 ### 1. With Android Studio
 1. Clone this repository:
    ```bash
-   git clone https://github.com/<username>/<repository-name>.git
+   git clone https://github.com/Aazeth/Overlay-Notes.git
    ```
 2. Open **Android Studio** (Jellyfish, Koala, Ladybug, or newer recommended).
 3. Select **Open** and choose the cloned directory.
