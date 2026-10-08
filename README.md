@@ -36,7 +36,7 @@ A floating sticky notes app for Android designed for effortless multitasking—t
 
 1. Clone the repository:
    ```bash
-   git clone [https://github.com/Aazeth/Overlay-Notes.git](https://github.com/Aazeth/Overlay-Notes.git)
+   git clone https://github.com/Aazeth/Overlay-Notes.git
    ```
 2. Open the project in **Android Studio**.
 3. Sync Gradle and click **Run**.
