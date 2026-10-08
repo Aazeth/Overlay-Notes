@@ -1,0 +1,6 @@
+{
+  "name": "Overlay Notes",
+  "description": "Floating overlay sticky notes with drag, transparency, resize, and custom note styling.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

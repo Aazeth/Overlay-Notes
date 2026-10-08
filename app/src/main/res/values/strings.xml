@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Overlay Notes</string>
+    <string name="overlay_service_name">Floating Notes Service</string>
+    <string name="overlay_notification_title">Overlay Notes Active</string>
+    <string name="overlay_notification_text">Tap to manage floating notes</string>
+    <string name="overlay_notification_channel">Floating Notes Channel</string>
+    <string name="overlay_notification_channel_desc">Shows ongoing notification for active overlay notes</string>
+</resources>
