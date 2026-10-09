@@ -883,7 +883,7 @@ fun SettingsScreen(
                     )
                     Spacer(modifier = Modifier.height(6.dp))
                     Text(
-                        text = "Version 1.0\n" +
+                        text = "Version 1.0.1\n" +
                                 "Lightweight floating sticky notes over other applications.\n" +
                                 "Package: com.aazeth.overlaynotes",
                         style = MaterialTheme.typography.bodySmall,

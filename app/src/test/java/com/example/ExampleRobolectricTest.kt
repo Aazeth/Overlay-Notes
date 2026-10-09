@@ -49,13 +49,13 @@ class ExampleRobolectricTest {
         val context = ApplicationProvider.getApplicationContext<Context>()
         val prefs = PreferencesManager(context)
 
-        // Default 1.0f (100% full scale)
-        assertEquals(1.0f, prefs.getOverlayHeaderScale(), 0.01f)
+        // Default 0.60f (60% scale)
+        assertEquals(0.60f, prefs.getOverlayHeaderScale(), 0.01f)
         prefs.setOverlayHeaderScale(0.80f)
         assertEquals(0.80f, prefs.getOverlayHeaderScale(), 0.01f)
 
-        // Safe button spacing default 4dp (avoids touching at 0dp)
-        assertEquals(4, prefs.getOverlayButtonSpacing())
+        // Button spacing default 0dp
+        assertEquals(0, prefs.getOverlayButtonSpacing())
         prefs.setOverlayButtonSpacing(2)
         assertEquals(2, prefs.getOverlayButtonSpacing())
 

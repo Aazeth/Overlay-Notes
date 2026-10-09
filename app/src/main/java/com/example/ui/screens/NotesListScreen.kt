@@ -21,9 +21,11 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
@@ -438,7 +440,8 @@ fun NotesListScreen(
                 Column(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .height(380.dp)
+                        .wrapContentHeight()
+                        .heightIn(max = 420.dp)
                         .verticalScroll(rememberScrollState())
                 ) {
                     Text(
@@ -446,7 +449,7 @@ fun NotesListScreen(
                         style = MaterialTheme.typography.labelLarge.copy(fontWeight = FontWeight.Bold),
                         color = MaterialTheme.colorScheme.primary
                     )
-                    Spacer(modifier = Modifier.height(8.dp))
+                    Spacer(modifier = Modifier.height(10.dp))
 
                     val gestureGuides = listOf(
                         Triple(Icons.Default.DragIndicator, "Drag Header", "Press and drag anywhere on the top bar to reposition the floating note on your screen."),
@@ -457,9 +460,11 @@ fun NotesListScreen(
                         Triple(Icons.Default.MoreVert, "Compact Mode", "Enable in Settings to condense all buttons into a single 3-dots menu.")
                     )
 
-                    gestureGuides.forEach { (icon, title, desc) ->
+                    gestureGuides.forEachIndexed { index, (icon, title, desc) ->
                         Row(
-                            modifier = Modifier.padding(vertical = 5.dp),
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(vertical = 5.dp),
                             verticalAlignment = Alignment.Top
                         ) {
                             Icon(
@@ -467,11 +472,11 @@ fun NotesListScreen(
                                 contentDescription = null,
                                 tint = MaterialTheme.colorScheme.primary,
                                 modifier = Modifier
-                                    .size(16.dp)
+                                    .size(18.dp)
                                     .padding(top = 2.dp)
                             )
-                            Spacer(modifier = Modifier.width(8.dp))
-                            Column {
+                            Spacer(modifier = Modifier.width(10.dp))
+                            Column(modifier = Modifier.weight(1f)) {
                                 Text(
                                     text = title,
                                     style = MaterialTheme.typography.labelMedium.copy(fontWeight = FontWeight.Bold)
@@ -482,6 +487,12 @@ fun NotesListScreen(
                                     color = MaterialTheme.colorScheme.onSurfaceVariant
                                 )
                             }
+                        }
+                        if (index < gestureGuides.lastIndex) {
+                            HorizontalDivider(
+                                color = MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.35f),
+                                modifier = Modifier.padding(vertical = 3.dp)
+                            )
                         }
                     }
                 }
